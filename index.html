@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>木木的自我介紹</title>
+    <style>
+      body {
+        background: linear-gradient(to right, #dff1f9, #f0f9f0);
+        font-family: "Microsoft JhengHei", Arial, sans-serif;
+        color: #333;
+        margin: 0;
+        padding: 0;
+      }
+
+      header {
+        background-color: #4CAF50;
+        color: white;
+        text-align: center;
+        padding: 25px 0;
+        font-size: 28px;
+        letter-spacing: 2px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      }
+
+      section {
+        background: white;
+        max-width: 700px;
+        margin: 40px auto;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      }
+
+      h2 {
+        color: #4CAF50;
+        border-left: 5px solid #4CAF50;
+        padding-left: 10px;
+      }
+
+      img {
+        width: 400px;
+        display: block;
+        margin: 0 auto 20px;
+        border-radius: 15px;
+        transition: transform 0.3s;
+      }
+
+      img:hover {
+        transform: scale(1.05);
+      }
+      
+      .work-img {
+  width: 200px;
+  display: inline-block;
+  margin: 10px;
+   text-align: center;
+}
+      .work-item {
+  position: relative; /* 讓 caption 可以定位在圖片上 */
+  display: inline-block;
+  overflow: hidden;
+}
+      .work-item img:hover {
+  filter: brightness(1.1);
+}
+
+.caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.6); /* 半透明黑底 */
+  color: white;
+  text-align: center;
+  padding: 8px;
+  opacity: 0; /* 預設隱藏 */
+  transition: opacity 0.3s; /* 滑過時淡入 */
+  border-radius: 0 0 10px 10px;
+}
+
+.work-item:hover .caption {
+  opacity: 1; /* 滑過時出現文字 */
+}
+
+      .works {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 預設三欄 */
+  gap: 20px;
+  justify-items: center;
+}
+
+
+
+      a {
+        color: #4CAF50;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      footer {
+        text-align: center;
+        color: #666;
+        font-size: 14px;
+        padding: 20px;
+      }
+      /* 平板尺寸（寬度小於900px）→ 兩欄 */
+@media (max-width: 900px) {
+  .works {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 手機尺寸（寬度小於600px）→ 一欄 */
+@media (max-width: 600px) {
+  .works {
+    grid-template-columns: 1fr;
+  }
+
+  .work-img {
+    width: 90%; /* 自動放大圖片以符合手機畫面 */
+  }
+}
+
+    </style>
+  </head>
+  <body>
+    <header>
+      木木的自我介紹頁 🌿
+    </header>
+
+    <section>
+      <img src="https://i.postimg.cc/x8mjpLWW/baron028.jpg" alt="我的照片">
+
+      <p>大家好！我是木木，目前正在學習 HTML 與 CSS。</p>
+
+      <h2>我的興趣</h2>
+      <p>我喜歡看小說、密室逃脫和玩 Switch 🎮。</p>
+
+      <h2>我的目標</h2>
+      <p>希望能自己做出一個完整的網站，未來也能學 CSS 和 JavaScript！</p>
+
+      <p>想看更多我在學的東西，  
+        <a href="https://www.instagram.com/whocare_016/" target="_blank">
+          點我看我都在學什麼 💚
+        </a>
+      </p>
+      
+      <h2>我的作品</h2>
+      <div class="work-item">
+  <a href="https://picsum.photos/800" target="_blank">
+    <img src="https://picsum.photos/200" alt="作品1" class="work-img">
+  </a>
+  <div class="caption">作品一</div>
+</div>
+
+<div class="work-item">
+  <a href="https://picsum.photos/801" target="_blank">
+    <img src="https://picsum.photos/200" alt="作品2" class="work-img">
+  </a>
+  <div class="caption">作品二</div>
+</div>
+
+<div class="work-item">
+  <a href="https://picsum.photos/802" target="_blank">
+    <img src="https://picsum.photos/200" alt="作品3" class="work-img">
+  </a>
+  <div class="caption">作品三</div>
+</div>
+
+
+
+        </a>
+      </p>
+    </section>
+
+    <footer>
+      © 2025 木木的練習網站 | Design by 木木
+    </footer>
+  </body>
+</html>
